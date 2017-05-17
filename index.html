@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Winda</title>
+</head>
+<body>
+
+<div class="container top">
+    <div class="row">
+        <div class='col-md-3'>
+            <h2>Symulator Windy</h2>
+        </div>
+        <div class="col-md-9">
+            <br>
+            <p>Symulator windy powstał jako element pracy zaliczeniowej z przedmiotu Komputerowe sterowanie obiektami. Symulator realizuje transport pasażerów z pięter na parter.</p>
+            <p>Założenia:</p>
+            <ul>
+                <li>Maksymalna pojemność windy 8 osób</li>
+                <li>Im wyższe piętro tym wyższy priorytet obsługi.</li>
+                <li>Przejazd między pietrami - 1 jednostka czasu na piętro</li>
+                <li>Zatrzymanie otwarcie i zamknięcie drzwi na piętrze - 1 jednostka czasu</li>
+                <li>Wsiadanie lub wysiadanie jednego pasażera - 0.5 jednostki czasu</li>
+            </ul>
+            <br>
+        </div>
+    </div>
+
+</div>
+    <br>
+<div class="container">
+    <div class="row">
+        <div class="szyb col-md-4">
+            <div id="pietro5">
+                <div class="pietro drzwi">
+                </div>
+            </div>
+            <div id="pietro4">
+                <div class="pietro drzwi">
+                </div>
+            </div>
+            <div id="pietro3">
+                <div class="pietro drzwi">
+                </div>
+            </div>
+            <div id="pietro2">
+                <div class="pietro drzwi">
+                </div>
+            </div>
+            <div id="pietro1">
+                <div class="pietro drzwi">
+                </div>
+            </div>
+            <div id="pietro0">
+                <div class="pietro winda">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="p5" class="control-label col-md-3">Piętro 5</label>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="p5" id="p5" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="p4" class="control-label col-md-3">Piętro 4</label>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="p4" id="p4" />
+                        </div>
+                    </div>
+                </div>
+                   <div class="form-group">
+                    <label for="p3" class="control-label col-md-3">Piętro 3</label>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="p3" id="p3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="p2" class="control-label col-md-3">Piętro 2</label>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="p2" id="p2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="p1" class="control-label col-md-3">Piętro 1</label>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="p1" id="p1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="parter" class="control-label col-md-3">Parter</label>
+
+                </div>                                                
+            </form>
+            <button id="run" class="btn btn-success"> Start </button>
+            <br>
+            <div>
+                <table>
+                    <tr>
+                        <td>Osoby</td>
+                        <td id="osoby"></td>
+                    </tr>
+                    <tr>
+                        <td>Droga</td>
+                        <td id="droga"></td>
+                    </tr>
+                    <tr>
+                        <td>Czas</td>
+                        <td id="czas"></td>
+                    </tr>
+                    <tr>
+                        <td>Czas obsługi</td>
+                        <td id="czasObslugi"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<h3>Progress</h3>
+        <div class="result col-md-4">
+            
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>
+<script src="winda.js"> </script>
+</body>
+</html>    

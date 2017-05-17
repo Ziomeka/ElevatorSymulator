@@ -1,0 +1,51 @@
+.pietro {
+border: 1px solid black;
+    height:33px;
+    width:33px;
+    display: inline-block;
+}
+
+div[id^="pietro"]{
+        height:33px;
+        margin-bottom: 15px;
+        border-bottom:1px solid black;
+        }
+
+.drzwi{
+        background-image: url("drzwi.png");
+}
+.winda {
+        background-image: url("winda.png");
+}
+.open {
+        background-image: url("open.png");
+}
+
+.ludek{
+        background-image: url("ludek.jpg");   
+        height:30px;  
+        width:10px; 
+        display: inline-block;
+}
+
+.result{
+        height: 500px;
+        overflow: auto;
+        border: 1px solid #ccc;;
+}
+
+td {
+        border:2px solid #ccc;;
+        min-width: 150px;
+}
+table{
+        margin:10px;
+}
+
+li{
+    text-align: left;    
+}
+
+.top{
+        background-color: #eee;
+}
