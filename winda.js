@@ -1,11 +1,11 @@
 $(function () {
     var get_data = function () {
         var winda = [0, 0, 0, 0, 0, 0];
-        winda[1] = Number($("#p1").val());
-        winda[2] = Number($("#p2").val());
-        winda[3] = Number($("#p3").val());
-        winda[4] = Number($("#p4").val());
-        winda[5] = Number($("#p5").val());
+        winda[1] = Math.abs(Number($("#p1").val()));
+        winda[2] = Math.abs(Number($("#p2").val()));
+        winda[3] = Math.abs(Number($("#p3").val()));
+        winda[4] = Math.abs(Number($("#p4").val()));
+        winda[5] = Math.abs(Number($("#p5").val()));
         console.log(winda);
         return winda;
     };
