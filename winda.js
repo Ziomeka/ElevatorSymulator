@@ -1,4 +1,19 @@
 $(function () {
+
+    function validateRange() {
+        var wartosc = 0;
+        var selector='';
+        for (var i = 1; i <= 5; i++) {
+            selector = "#p" + i;
+            console.log(selector);
+            wartosc = Number($(selector).val());
+            if (wartosc > 20 || wartosc < 0) {
+                return false;
+            }
+        }
+        return true;
+    };
+
     var get_data = function () {
         var winda = [0, 0, 0, 0, 0, 0];
         winda[1] = Math.abs(Number($("#p1").val()));
@@ -6,7 +21,6 @@ $(function () {
         winda[3] = Math.abs(Number($("#p3").val()));
         winda[4] = Math.abs(Number($("#p4").val()));
         winda[5] = Math.abs(Number($("#p5").val()));
-        console.log(winda);
         return winda;
     };
 
@@ -218,9 +232,16 @@ $(function () {
     };
 
     $("#run").click(function () {
+        var valid=validateRange();
+        if (valid){
         var daneUzytkownika = get_data();
         var sekwencjaRuchu = algorytmMaxPietro(daneUzytkownika);
         symulatorWindy(sekwencjaRuchu, daneUzytkownika);
+    }
+    else
+    {
+        alert('Liczba pasażerów musi mieścić się w przedziale <0,20>')
+    }
     });
 
 });
